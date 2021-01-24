@@ -1,9 +1,93 @@
-*{
-  font-family: Helvetica,sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+* {
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
 }
-body{
-  padding: 60px;
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: rgb(18, 18, 18);
+  scroll-behavior: smooth;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.header {
+  width: 100%;
+}
+.header h2 {
+  font-size: 40px;
+  color: #ffff;
+  padding: 20px 0px;
+}
+.main__buscador {
+  width: 100%;
+}
+.form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  position: sticky;
+  z-index: 10;
+  top: 0px;
+}
+.form input[type="text"] {
+  flex-basis: 95%;
+  padding: 12px 20px;
+  font-size: 20px;
+  outline: none;
+}
+.form__search {
+  flex-basis: 5%;
+  background: linear-gradient(
+    45deg,
+    rgb(153, 51, 255) 0%,
+    rgb(255, 102, 102) 100%
+  );
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.item {
+  width: 100%;
+  border: 1px dashed rgb(153, 51, 255);
+  margin: 15px 0px;
+}
+
+.item h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: #ffff;
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 50%;
+}
+.card img {
+  width: 100%;
+}
+.card p {
+  color: black;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 0px;
+  background-color: white;
 }

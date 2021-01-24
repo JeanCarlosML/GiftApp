@@ -1,23 +1,26 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
-  const data = ["One punch"];
+  const data = ["Naruto"];
   const [categories, setcategories] = useState(data);
 
-  /* const handleAdd = () => {
-    //setcategories([...categories,'HunterxHunter'])
-    setcategories((cats) => [...cats, "HunterxHunter"]);
-  }; */
   return (
-    <Fragment>
-      <h2>Gif Expert App</h2>
-      <hr />
-      <AddCategory setCategories={setcategories} />
-      <ul>
-        {categories.map((category) =>(<GifGrid key={category} category={category}/>) )}
-      </ul>
-    </Fragment>
+    <div className="container">
+      <header className="header">
+        <h2>GIPHY</h2>
+      </header>
+      <main className="main">
+        <section className="main__buscador">
+          <AddCategory /*Formulario*/ setCategories={setcategories} />
+          <div className="items">
+            {categories.map((category) => (
+              <GifGrid key={category} category={category} />
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
   );
 };
