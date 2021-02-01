@@ -67,6 +67,17 @@ body {
   font-size: 40px;
   color: #ffff;
 }
+.item p{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 40px;
+  color: white;
+}
+.item p i{
+  flex-basis: 100%;
+}
 
 .cards {
   width: 100%;

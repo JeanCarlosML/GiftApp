@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
-
+import "animate.css"
 export const GifExpertApp = () => {
   const data = ["Naruto"];
   const [categories, setcategories] = useState(data);
